@@ -24,7 +24,7 @@ jobs:
       run: |
         cd ./python
         echo "HE ${{ secrets.DOCKERPW }}"
-        echo "${{ secrets.DOCKERTK }}" | docker login -u "schlaich1" 
+        echo "${{ secrets.DOCKERTK }}" | docker login -u "schlaich1" --password-stdin
         #echo "${{ secrets.DOCKERPW }}" | docker login -u "schlaich1" --password-stdin
         docker image build -t schlaich1/gitops:hellov1.0 .
         docker push schlaich1/gitops:hellov1.0
