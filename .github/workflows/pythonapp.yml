@@ -24,6 +24,6 @@ jobs:
       run: |
         cd ./python
         echo "HEEERE ${{ secrets.DOCKERPW }}"
-        docker login -u "schlaich1" -p "${{ secrets.DOCKERPW }}" 
+        #docker login -u "schlaich1" -p "${{ secrets.DOCKERPW }}" 
         docker image build -t schlaich1/gitops:hellov1.0 .
         docker push Schlaich1/gitops:hellov1.0
