@@ -23,7 +23,7 @@ jobs:
     - name: Build & Push Image
       run: |
         cd ./python
-        echo "HEEERE ${{ secrets.DOCKERPW }}"
+        echo "HEEERRRRRE ${{ secrets.DOCKERPW }}"
         #docker login -u "schlaich1" -p "${{ secrets.DOCKERPW }}" 
         docker image build -t schlaich1/gitops:hellov1.0 .
         docker push schlaich1/gitops:hellov1.0
